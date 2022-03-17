@@ -5,33 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/calculos.css" />
     <title>Factorial de n</title>
-    <script>
-        // Definir variables
-        var n = 0;
-
-        // Funcion para leer numeros Reales
-        function leerNumero() {
-            num = parseInt(
-                prompt("Porfi, escribe un número")
-            );
-            return num;
-        }
-
-        function mostrarResultados(nf) {
-            document.getElementById('td21').innerHTML = n;
-            document.getElementById('td22').innerHTML = factorial(nf);
-        }
-
-        function factorial(nf) {
-            var factorial = 1;
-            for ( i=1; i <= nf; i++ ) {
-                factorial = factorial * i;
-            }
-
-            return factorial;
-        }
-
-    </script>
+    <script> src="js/calculos.js"</script>
 </head>
 
 <body>
@@ -71,7 +45,7 @@
             <h2>Factorial de 'n'</h2>
             <p>
                 <input type="button" onclick="n = leerNumero()" value="Primer número" />
-                <input type="button" onclick="mostrarResultados(n)" value="Mostrar resultados" />
+                <input type="button" onclick="mostrarFactorial(nf)" value="Mostrar resultados" />
             </p>
             <table class="resultados">
                 <caption>Tabla de resultados</caption>
