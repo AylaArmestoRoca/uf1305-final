@@ -17,14 +17,14 @@
             return num;
         }
 
-        function mostrarResultados() {
-            document.getElementById('td1').innerHTML = n;
-            document.getElementById('td2').innerHTML = factorial();
+        function mostrarResultados(nf) {
+            document.getElementById('td21').innerHTML = n;
+            document.getElementById('td22').innerHTML = factorial(nf);
         }
 
-        function factorial() {
+        function factorial(nf) {
             var factorial = 1;
-            for ( i=1; i <= n; i++ ) {
+            for ( i=1; i <= nf; i++ ) {
                 factorial = factorial * i;
             }
 
@@ -40,13 +40,12 @@
     </header>
     <nav></nav>
     <main>
-
         <article class="botones">
             <h2>Múltiplos de 'n' hasta 'm'</h2>
             <p>
                 <input type="button" onclick="n = leerNumero()" value="Primer número" />
                 <input type="button" onclick="m = leerNumero()" value="Segundo número" />
-                <input type="button" onclick="mostrarResultados()" value="Mostrar resultados" />
+                <input type="button" onclick="mostrarResultados(n)" value="Mostrar resultados" />
             </p>
 
             <table class="resultados">
@@ -72,7 +71,7 @@
             <h2>Factorial de 'n'</h2>
             <p>
                 <input type="button" onclick="n = leerNumero()" value="Primer número" />
-                <input type="button" onclick="mostrarResultados()" value="Mostrar resultados" />
+                <input type="button" onclick="mostrarResultados(n)" value="Mostrar resultados" />
             </p>
             <table class="resultados">
                 <caption>Tabla de resultados</caption>
